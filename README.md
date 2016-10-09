@@ -6,11 +6,11 @@ This repository contains source codes from various programming languages that de
 
 It is structured based on the algorithm topic by folder and by programming languages used. 
 
-##Folder hierarchy
+###Folder hierarchy
 
 Programming Languages => Algorithms => file samples implementation
 
-##Why separate algorithm implementations by different sample files? Should it just be in one file?
+###Why separate algorithm implementations by different sample files? Should it just be in one file?
 
 There are various implementations of each algorithms. Separating it by files each implementation(sample1, sample2, etc.) would reduce the clutter if the implementation was too long
 
