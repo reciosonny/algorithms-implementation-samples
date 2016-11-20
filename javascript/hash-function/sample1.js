@@ -8,12 +8,11 @@ function hashFunctionDictionary() {
 	book["milk"] = 1.49;
 	book["avocado"] = 1.49;
 	
-	return book;	
+	return book;
 }
 
 
 var hashBook = hashFunctionDictionary();
-
 console.log('Hash function start demonstration...');
 for(key in hashBook) {
 	var value = hashBook[key];

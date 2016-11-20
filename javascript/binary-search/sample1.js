@@ -14,8 +14,6 @@ function binarySearch(arrayList, item) {
 		console.log('guess: '+guess)
 
 		if (guess == item) {
-			console.log();
-			console.log();
 			console.log('you guessed it correctly!');
 			console.log('# of times guessed: '+timesGuessed);
 			return;
@@ -27,8 +25,6 @@ function binarySearch(arrayList, item) {
 		timesGuessed+=1;
 	}
 
-	console.log();
-	console.log();
 	console.log('cannot find the # to guess in array element');
 	console.log('# of times guessed: '+timesGuessed);
 	return null;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Algorithms.BreadthFirst;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -16,7 +17,9 @@ namespace Algorithms {
             test.Add("avocado", 2.75);
 
 
-            Console.WriteLine(test["avocado"]);
+            //Console.WriteLine(test["avocado"]);
+            //BreadthFirstAlgorithm.Sample1.Execute();
+            BreadthFirstAlgorithm.Sample2.Execute();
 
         }
 
