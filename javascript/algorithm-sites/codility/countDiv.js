@@ -16,8 +16,8 @@ function countDiv(A,B,K) {
 	var countDivisible = 0;
 
 	// return ((A+B) / K) / K;
-	// return Math.floor((B-A) / K) + 1;
-	var result = (Math.floor(B/K)-Math.floor(A/K));
+	// var result = Math.floor((B-A) / K); //one possible answer(only 75% correct)
+	var result = (Math.floor(B/K)-Math.floor(A/K)); //another possible answer
 	return result + (A % K === 0 ? 1:0);
 }
 
@@ -25,14 +25,23 @@ function assertFunction(valueToEvaluate, rightAnswer) {
 	return valueToEvaluate === rightAnswer;
 }
 
-function Assert(argument) {
+class_name.prototype.method_name = function(first_argument) {
 	// body...
 };
-Assert.prototype.areEqual = function(valueToEvaluate, rightAnswer) {
-	return valueToEvaluate === rightAnswer;	
-};
+var Assert = (function () {
+	function Assert() {
+	};
+	Assert.prototype.areEqual = function(valueToEvaluate, rightAnswer) {
+		return valueToEvaluate === rightAnswer;	
+	};
+	Assert.prototype.display = function() {
+		return _self.tester
+	};
+	return Assert;
+}());
 
-var assert = new Assert();
+var assert = new Assert("Test zzzz");
+console.log(assert.display());
 console.log(countDiv(6,11,2));
 console.log(countDiv(6,11,1));
 console.log(countDiv(5,11,5));

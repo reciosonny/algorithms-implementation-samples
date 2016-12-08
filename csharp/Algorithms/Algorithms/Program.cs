@@ -11,15 +11,14 @@ namespace Algorithms {
     class Program {
         static void Main(string[] args) {
 
-            //RunQuicksort();
-
-            var test = new Dictionary<string, double>();
-            test.Add("avocado", 2.75);
+            RunQuicksort();
 
 
             //Console.WriteLine(test["avocado"]);
             //BreadthFirstAlgorithm.Sample1.Execute();
-            BreadthFirstAlgorithm.Sample2.Execute();
+            //BreadthFirstAlgorithm.Sample2.Execute();
+
+
 
         }
 
