@@ -14,6 +14,7 @@ function tapeEquilibrium(A) {
 		if (diff < smallestDiff) {
 			smallestDiff = diff;
 		}
+		
 		// console.log('beforesum: '+beforeSum+' aftersum:'+afterSum);
 	}
 

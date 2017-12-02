@@ -8,5 +8,5 @@ console.log('test');
 console.log(filteredNames);
 
 // filtered.pop();
-filtered.remove(1);
+// filtered.remove(1);
 console.log(filtered);

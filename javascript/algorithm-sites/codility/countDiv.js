@@ -11,7 +11,6 @@
 // 	return countDivisible;
 // }
 
-
 function countDiv(A,B,K) {
 	var countDivisible = 0;
 
@@ -31,6 +30,7 @@ class_name.prototype.method_name = function(first_argument) {
 var Assert = (function () {
 	function Assert() {
 	};
+
 	Assert.prototype.areEqual = function(valueToEvaluate, rightAnswer) {
 		return valueToEvaluate === rightAnswer;	
 	};

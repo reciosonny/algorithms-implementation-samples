@@ -16,7 +16,8 @@ function countChar(str, char) {
 			count+=1;
 		}
 	}
-
+	var test = 0;
+	
 	return count;
 }
 

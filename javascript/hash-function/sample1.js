@@ -11,10 +11,10 @@ function hashFunctionDictionary() {
 	return book;
 }
 
-
 var hashBook = hashFunctionDictionary();
 console.log('Hash function start demonstration...');
 for(key in hashBook) {
 	var value = hashBook[key];
 	console.log("key: "+key+"\n\tvalue: "+value);
 }
+

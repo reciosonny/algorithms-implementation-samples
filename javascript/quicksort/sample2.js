@@ -15,6 +15,7 @@ function quicksort(arr) {
 
 		console.log(arr);
 		console.log(pivot);
+		
 		for (var i = 0; i < arr.length; i++) {
 			var j = arr[i];
 			if (j <= pivot) {	

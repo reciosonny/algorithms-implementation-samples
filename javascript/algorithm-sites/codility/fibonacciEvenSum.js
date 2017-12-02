@@ -16,4 +16,4 @@ function fibonacci(n) {
 	return result;
 }
 
-console.log(fibonacci(5));
+console.log(fibonacci(12));

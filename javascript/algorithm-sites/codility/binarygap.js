@@ -21,7 +21,7 @@ function binaryGap(N) {
 }
 
 function sortNumber(a,b) {
-    return b - a;
+	return b - a;
 }
 
 function decimalToBinary(num) {

@@ -4,7 +4,6 @@ function arrayPair(A) {
 		var num1 = A[i];
 		var num2 = A[i+2];
 
-
 		if (num1 !== num2 && !isInArray(num1, pairEvaluated) && num1 % 2 !== 0) {
 			return num1;
 		}
@@ -21,3 +20,7 @@ function isInArray(value, array) {
 var arr = [9,3,9,3,9,7,9];
 
 console.log(arrayPair(arr));
+
+
+
+

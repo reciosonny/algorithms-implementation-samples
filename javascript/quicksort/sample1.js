@@ -23,5 +23,6 @@ function quicksort(arr) {
 }
 
 console.log(quicksort([10,5,2,3,7,4]));
+
 // console.log([1,2,3])
 // console.log([1,2,3] + [1] + [4,5,6]);

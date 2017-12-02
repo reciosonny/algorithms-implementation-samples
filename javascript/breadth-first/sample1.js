@@ -52,4 +52,3 @@ function search(name) {
 }
 
 search("you");
-
