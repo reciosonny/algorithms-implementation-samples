@@ -41,7 +41,7 @@ class LinkedList {
 
     this.size++;
   }
-
+  
   // Insert at index
   insertAt(data, index) {
     //  If index is out of range
