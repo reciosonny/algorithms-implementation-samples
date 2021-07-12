@@ -196,6 +196,36 @@ class LinkedList {
     return newNode;
   }
 
+  deleteNodeAt(index) {
+
+    let count = 0;
+
+    let current = this.head;
+    let prevNode = undefined;
+
+    if(index === 0) {
+      this.head = current.next;
+    } else {
+
+      while (index >= count) {
+  
+        current = current.next;
+  
+        if (prevNode) { //we check if prevNode has value. If it has, then proceed with getting the next value for it
+          prevNode = prevNode.next;
+        }
+        if (count > 0 && !prevNode) {
+          prevNode = this.head;
+        }
+  
+        count+=1;
+      }
+      prevNode.next = current;
+
+    }
+
+  }
+
   // tail = last node of linked list since head is the first chain in linked list
   getNodeTail() {
     let current = this.head;
@@ -239,7 +269,6 @@ class LinkedList {
 // }
 
 var ll = new LinkedList();
-
 // ll.insertFirst(100);
 // ll.insertFirst(200);
 // ll.insertFirst(300);
@@ -251,9 +280,8 @@ ll.insert(2);
 ll.insert(3);
 ll.insert(55);
 ll.insert(88);
-// ll.insertAt(777, 1);
-// console.log('return value: ', ll.insertNodeAt(2, 567))
 ll.insertNodeAt(2, 2357);
+ll.deleteNodeAt(2);
 
 // ll.insert(22);
 
