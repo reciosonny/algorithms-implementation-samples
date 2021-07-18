@@ -130,10 +130,27 @@ class LinkedList {
       console.log(current.data);
       current = current.next;
     }
+
   }
 
+  
   //#region my implementation
+  
+  getConcatenatedString() {
+    var current = this.head;
 
+    let concatDataLinkedList = '';
+    while (current) {
+
+      if (current) {
+        concatDataLinkedList += current.data;        
+      }
+
+      current = current.next;
+    }
+
+    return concatDataLinkedList;
+  }
   // note by Sonny: same as insertLast method
   insert(data) {
     const node = new Node(data);
@@ -275,13 +292,13 @@ var ll = new LinkedList();
 // ll.insertLast(400);
 // ll.insertAt(500, 3);
 
-ll.insert(1);
-ll.insert(2);
-ll.insert(3);
-ll.insert(55);
-ll.insert(88);
-ll.insertNodeAt(2, 2357);
-ll.deleteNodeAt(2);
+// ll.insert(1);
+// ll.insert(2);
+// ll.insert(3);
+// ll.insert(55);
+// ll.insert(88);
+// ll.insertNodeAt(2, 2357);
+// ll.deleteNodeAt(2);
 
 // ll.insert(22);
 
@@ -291,4 +308,32 @@ ll.deleteNodeAt(2);
 // console.log('tail: ', ll.getNodeTail());
 // console.log("node at index: ", ll.getNodeAtIndex(3));
 
-ll.printListData();
+// ll.printListData();
+
+// note: solving the cracking the coding interview problem (2.5)
+ll.insert(6)
+ll.insert(1)
+ll.insert(7)
+
+var ll2 = new LinkedList();
+
+ll2.insert(2)
+ll2.insert(9)
+ll2.insert(5)
+
+const num1 = Number(ll.getConcatenatedString());
+const num2 = Number(ll2.getConcatenatedString());
+
+const sumNum = num1 + num2;
+
+const sumLinkedList = new LinkedList();
+
+String(sumNum).split('').forEach(num => sumLinkedList.insert(num));
+
+console.log('sum linked list:')
+sumLinkedList.printListData();
+
+
+module.exports = {
+  LinkedList: LinkedList
+};
