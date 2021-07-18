@@ -133,7 +133,6 @@ class LinkedList {
 
   }
 
-  
   //#region my implementation
   
   getConcatenatedString() {
