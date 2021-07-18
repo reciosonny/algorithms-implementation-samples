@@ -286,53 +286,13 @@ class LinkedList {
 // }
 
 var ll = new LinkedList();
-// ll.insertFirst(100);
-// ll.insertFirst(200);
-// ll.insertFirst(300);
-// ll.insertLast(400);
-// ll.insertAt(500, 3);
-
-// ll.insert(1);
-// ll.insert(2);
-// ll.insert(3);
-// ll.insert(55);
-// ll.insert(88);
-// ll.insertNodeAt(2, 2357);
-// ll.deleteNodeAt(2);
-
-// ll.insert(22);
-
-// console.log('starting the output...');
-// console.log('size: ', ll.size);
-// console.log('head: ', ll.getHead());
-// console.log('tail: ', ll.getNodeTail());
-// console.log("node at index: ", ll.getNodeAtIndex(3));
-
-// ll.printListData();
 
 // note: solving the cracking the coding interview problem (2.5)
-ll.insert(6)
-ll.insert(1)
-ll.insert(7)
+// ll.insert(6)
+// ll.insert(1)
+// ll.insert(7)
 
-var ll2 = new LinkedList();
-
-ll2.insert(2)
-ll2.insert(9)
-ll2.insert(5)
-
-const num1 = Number(ll.getConcatenatedString());
-const num2 = Number(ll2.getConcatenatedString());
-
-const sumNum = num1 + num2;
-
-const sumLinkedList = new LinkedList();
-
-String(sumNum).split('').forEach(num => sumLinkedList.insert(num));
-
-console.log('sum linked list:')
-sumLinkedList.printListData();
-
+// ll.printListData();
 
 module.exports = {
   LinkedList: LinkedList
