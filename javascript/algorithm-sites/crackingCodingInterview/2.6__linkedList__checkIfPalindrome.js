@@ -6,12 +6,6 @@ function Node(data) {
 function isPalindrome(head) {
   const reversed = reverseAndClone(head);
 
-  var current = reversed;
-
-  while (current) {
-    current = current.next;
-  }
-
   return isEqual(head, reversed);
 }
 
@@ -24,14 +18,12 @@ function reverseAndClone(node) {
     head = n;
     node = node.next;
   }
-
   
   return head;
 }
 
 function isEqual(one, two) {
   while (one && two) {
-    console.log(two.data)
     if (one.data !== two.data) {
       return false;
     }
@@ -42,10 +34,10 @@ function isEqual(one, two) {
   return true;
 }
 
+const arr = [5,4,3,4,5];
+let l1 = arr.reduce((init, curr, idx) => {
 
-let l1 = [5,4,3,4,5].reduce((init, curr) => {
-
-  if (!init) {
+  if (!init) { //initialization stage
     init = { head: new Node(curr) };
     init.current = init.head;
   } else {
