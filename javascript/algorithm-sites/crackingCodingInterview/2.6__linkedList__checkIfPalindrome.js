@@ -34,7 +34,8 @@ function isEqual(one, two) {
   return true;
 }
 
-const arr = [5,4,3,4,5];
+// const arr = [5,4,3,4,5];
+const arr = [1,2,3,2,1];
 let l1 = arr.reduce((init, curr, idx) => {
 
   if (!init) { //initialization stage
