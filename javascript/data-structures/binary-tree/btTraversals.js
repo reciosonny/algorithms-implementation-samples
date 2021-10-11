@@ -73,5 +73,17 @@ function preOrderTraversal(node) {
   preOrderTraversal(node.right);
 }
 
+function postOrderTraversal(node) {
+  if(!node) return;
+
+  postOrderTraversal(node.left);
+  postOrderTraversal(node.right);
+
+  console.log('====================');
+  console.log('current node value: ', node.value);
+  console.log('====================');
+}
+
 // inOrderTraversal(head);
-preOrderTraversal(head);
+// preOrderTraversal(head);
+postOrderTraversal(head);
