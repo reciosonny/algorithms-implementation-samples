@@ -1,7 +1,5 @@
 function binarySearch(arr, startLeftIndex, startRightIndex, x) {
 
-  debugger;
-  console.log('trigger binary search');
   if (startRightIndex >= startLeftIndex) {
       let midIdx = startLeftIndex + Math.floor((startRightIndex - startLeftIndex) / 2);
 
@@ -31,10 +29,4 @@ let n = arr.length
 let result = binarySearch(arr, 0, n - 1, x);
 (result == -1) ? console.log("Element is not present in array")
                  : console.log("Element is present at: " +result);
-
-
-
-
-
-
 
