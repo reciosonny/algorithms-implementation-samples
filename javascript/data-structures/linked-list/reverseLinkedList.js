@@ -11,10 +11,11 @@ const reverseList = function (head) {
     let nextTemp = curr.next; //before we "override" the value of "curr.next", we store its linkedList node so we can traverse the whole linkedList for reversal without changing the overall flow of the given linkedList
     curr.next = prev; //assign curr.next using prev value
 
-    
-    console.log('current prev: ', curr.next);
-
+    // console.log('curr val: ', nextTemp);
     prev = curr; //assign prev node using curr value
+
+    console.log('prev val: ', prev);
+
     curr = nextTemp; //assign curr 
   }
 
@@ -35,7 +36,7 @@ const reverseListRecursive = (head) => {
 // recursive version of reversing linked list, using a bit of technique from iterative solution
 const reverseListRecursiveV2 = (curr, prev) => {
   
-  console.log('prev val: ', prev);
+  // console.log('prev val: ', prev);
   if(curr) {
     const nextTemp = curr.next;
     curr.next = prev;
@@ -60,19 +61,21 @@ let curr = head;
 curr = head;
 //#endregion
 
+// while(curr) {
+
+//   curr = curr.next;
+// }
+
+// console.log(curr); //display it now.
+
+
+curr = reverseList(head);
+// curr = reverseListRecursive(head, null);
+
+// console.log('reversing linked list:');
 while(curr) {
 
-  console.log(curr.val); //display it now.
-  curr = curr.next;
-}
-
-// curr = reverseList(head);
-curr = reverseListRecursive(head, null);
-
-console.log('reversing linked list:');
-while(curr) {
-
-  console.log(curr.val); //display it now.
+  // console.log(curr.val); //display it now.
 
   curr = curr.next;
 }
