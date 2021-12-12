@@ -43,13 +43,6 @@ let Trie = function() {
 
 		const remainingLetters = rest.join('');
 
-
-    const getCurrentLetterNodes = () => {
-      console.log('current letter: ', firstLetter);
-      console.log('letter nodes: ', node.keys.get(firstLetter));
-    }
-
-
 		if (input.length == 0) {
 
 			node.setEnd();
@@ -65,25 +58,23 @@ let Trie = function() {
 		};
 	};
 
+	// Note: The idea here is as long as we get to the last letter and `isWord` is equals to true, then we can conclude the the word being checked is already stored in the trie data structure, so therefore it's considered a word
 	this.isWord = function(word) {
 		let node = this.root;
 
-    console.log('current word: ', word);
+		const wordArr = word.split('');
 
-		while (word.length > 1) {
-			if (!node.keys.has(word[0])) {
+		let currLetter;
+		while (currLetter = wordArr.shift()) {
+
+			if (!node.keys.has(currLetter)) {
 				return false;
 			} else {
-				node = node.keys.get(word[0]);
-				word = word.substr(1);
+				node = node.keys.get(currLetter); //assign node variable to current letter node
 			};
 		};
 
-    console.log('current word: ', word);
-    console.log('selected node: ', node.keys.get(word));
-
-		return (node.keys.has(word) && node.keys.get(word).isEnd()) ? 
-      true : false;
+		return node.isEnd(); //check the last letter if isEnd is true
 	};
 
 	this.print = function() {
@@ -126,6 +117,7 @@ myTrie.add('sense');
 console.log(myTrie.isWord('doll'))
 console.log(myTrie.isWord('dor'))
 console.log(myTrie.isWord('dorf'))
+console.log(myTrie.isWord('dork'))
 console.log(myTrie.print());
 
 
