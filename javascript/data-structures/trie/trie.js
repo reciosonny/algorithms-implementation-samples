@@ -2,7 +2,7 @@
 
 /**
  * Questions:
- * 1. How does a node keep track of keys stored in each node? How do they interact together?
+ * 1. How does a node keep track of keys stored in each node? How do they interact together? Answer: Node is just one-directional so no pointers for going back the node graph
  */
 let Node = function() {
 	this.keys = new Map();
@@ -75,6 +75,25 @@ let Trie = function() {
 		};
 
 		return node.isEnd(); //check the last letter if isEnd is true
+	};
+
+	// checks prefix within the word
+	this.startsWith = function(prefix) {
+		let node = this.root;
+	
+		const wordArr = prefix.split('');
+	
+		let currLetter;
+		while (currLetter = wordArr.shift()) {
+			
+			if (!node.keys.has(currLetter) && node.letter !== currLetter) {
+				return false;
+			} else {
+				node = node.keys.get(currLetter); //assign node variable to current letter node
+			}
+		};
+	
+		return true;
 	};
 
 	this.print = function() {
