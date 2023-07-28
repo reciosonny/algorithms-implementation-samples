@@ -2,14 +2,6 @@ let arr = [12,34,23,56,21,11,10,4,9,12];
 let test = arr.filter((item, pos) => reduceDupes(arr, item, pos)).sort(sortDescending).slice(0,6);
 function sortDescending(a,b) { return b-a; }
 function reduceDupes(arr, item, pos) { return arr.indexOf(item) === pos}
-// function reduceArray(arr) {
-// 	//note: 1st implementation.
-// 	// const res = arr.map((x, index) => isNaN(arr[index+1]) ? undefined : x+arr[index+1]).filter((x) => x !== undefined);
-// 	// return res.length > 2 ? reduceArray(res) : res[0] * res[1];
-
-// 	//note: 2nd implementation. Much shorter
-// 	return arr.map((x, index) => isNaN(arr[index+1]) ? undefined : x+arr[index+1]).filter((x) => x !== undefined).map((x, index, res) => res.length > 2 ? reduceArray(res) : res[0] * res[1])[0];
-// }
 //note: 3rd implementation of reduceArray. The implementation is much shorter but the readability index suffers. Comment this out if you want to try the 1st or 2nd implementation of reduceArray
 let reduceArray = (arr) => arr.map((x, index) => isNaN(arr[index+1]) ? undefined : x+arr[index+1]).filter((x) => x).map((x, index, res) => res.length > 2 ? reduceArray(res) : res[0] * res[1])[0];
 
